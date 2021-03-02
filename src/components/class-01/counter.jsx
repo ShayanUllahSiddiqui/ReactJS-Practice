@@ -9,4 +9,4 @@ export default function Counter({count, add, sub}){
        <button onClick={sub}>-</button>
     </div>
 )
-}
+};
