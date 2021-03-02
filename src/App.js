@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import Counter from "./components/class-01/counter";
 
-function App() {
-  const [count, setCount] = useState(0);
+export default function App() {
+  const[count,setCount] = useState(0)
 
-  const addCount = () => {
-    setCount(count + 1)
+  function add(){
+    setCount(count+1)
   }
-  const subCount = () => {
-    setCount(count - 1)
-  }
+
+  function sub(){
+   setCount(count-1)
+
+ }
 
   return (
-    <>
-      <h1>Click the button</h1>
-      <h1> {count} </h1>
-      <button onClick={addCount}> + </button>
-      <button onClick={subCount}> - </button>
-    </>
-  )
+    <div className="App">
+      <Counter count={count} add={add} sub={sub} />
+    </div>
+  );
 }
-
-export default App
